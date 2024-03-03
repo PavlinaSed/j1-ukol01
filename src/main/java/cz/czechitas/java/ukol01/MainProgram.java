@@ -24,9 +24,13 @@ public class MainProgram {
         newPositionSun();
         drawSun();
 
-        newPositionRight();
-        newPositionRight();
-        drawOctagon();
+        newPositionFirstHouse();
+        drawHouse();
+        newPositionUp();
+        drawHouse();
+        drawRowOfHouses();
+        newPositionLastHouse();
+        drawHouse();
     }
 
     public void drawPiglet() {
@@ -87,6 +91,30 @@ public class MainProgram {
         zofka.turnRight(180);
     }
 
+    public void drawSun() {
+        for (int i = 0; i < 18; i++) {
+            zofka.turnRight(20);
+            zofka.move(20); //proportionally increases or decreases the size of the sun
+            drawSunbeam();
+        }
+        zofka.turnLeft(5);
+    }
+
+    public void drawSunbeam() {
+        zofka.turnLeft(90);
+        zofka.move(40);
+        zofka.turnLeft(180);
+        zofka.move(40);
+        zofka.turnLeft(90);
+    }
+
+    public void drawRowOfHouses() {
+        for (int i = 0; i < 4; i++) {
+            newPositionRight();
+            drawHouse();
+        }
+    }
+
     public void newPositionRight() {
         zofka.penUp();
         zofka.turnRight(90);
@@ -111,6 +139,12 @@ public class MainProgram {
         zofka.penDown();
     }
 
+    public void newPositionUp() {
+        zofka.penUp();
+        zofka.move(230);
+        zofka.penDown();
+    }
+
     public void newPositionSun() {
         zofka.penUp();
         for (int i = 0; i < 4; i++) {
@@ -121,31 +155,35 @@ public class MainProgram {
         zofka.penDown();
     }
 
-    public void drawSun() {
-        for (int i = 0; i < 18; i++) {
-            zofka.turnRight(20);
-            zofka.move(20); //proportionally increases or decreases the size of the sun
-            drawSunbeam();
-        }
-        zofka.turnLeft(5);
-    }
-
-    public void drawSunbeam() {
-        zofka.turnLeft(90);
-        zofka.move(40);
+    public void newPositionLastHouse() {
+        zofka.penUp();
         zofka.turnLeft(180);
-        zofka.move(40);
-        zofka.turnLeft(90);
+        zofka.move(230);
+        zofka.turnLeft(180);
+        zofka.penDown();
     }
 
-public void drawOctagon() {
+    public void newPositionFirstHouse() {
+        newPositionDown();
+        newPositionLeft();
+        zofka.penUp();
+        zofka.turnRight(180);
+        zofka.move(150);
+        zofka.turnRight(180);
+        zofka.penDown();
+        zofka.turnRight(5);
+    }
+
+
+/*
+    public void drawOctagon() {
     for (int i = 0; i < 8; i++) {
         zofka.turnRight(45);
         zofka.move(30);
     }
     zofka.turnLeft(5);
 }
-
+*/
 
 }
 
