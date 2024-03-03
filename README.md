@@ -1,64 +1,56 @@
-# Úkol 1 (lekce 2) – Želva Žofka
+# Task 1 (lesson 2) – The Turtle Žofka
 
-Každou část úkolu vytvořte jako samostatný *commit*.
-Pokud zjistíte dodatečně v kódu nějakou chybu, nevadí, commitněte opravu jako další *commit*.
-Pokud si chcete práci průběžně zálohovat, po *commitu* udělejte také *push*, čímž se všechny neodeslané commity nahrají na GitHub.
+Create each part of the task as a separate commit. If you later discover any errors in the code, no problem, commit the fix as another commit. 
+If you want to back up your work continuously, after committing, also push, which will upload all unpushed commits to GitHub.
 
-## Část 1
-Vytvořte metodu `nakresliPrasatko()`, která nakreslí prasátko jako na obrázku.
-Jako bonus můžete dokreslit prasátku i ocásek.
-Metodu zavolejte z metody `start` ve třídě `HlavniProgram`, aby se prasátko opravdu nakreslilo do okna aplikace.
+## Part 1
+Create the method drawPiglet() that draws a piglet as shown in the picture. As a bonus, you can also draw the piglet's tail. 
+Call this method from the start method in the MainProgram class to actually draw the piglet into the application window.
 
-[obrázek prasátka](obrazky/ukol01-prasatko.svg)
+[piglet image](obrazky/ukol01-prasatko.svg)
 
-## Část 2
-Pokračujte v projektu a nakreslete několik obrazců podle obrázků níže.
-Pro každý obrázek vytvořte speciální metodu (kterou zavoláte z `HlavniProgram`) a případně uvnitř volejte další metody.
-Dejte pozor na to, ať se obrázky nepřekrývají (ani s prasátkem).
+## Part 2
+Continue with the project and draw several shapes according to the pictures below. 
+Create a special method for each image (which you will call from MainProgram) and optionally call other methods inside it. 
+Be careful not to overlap the images (including the piglet).
 
-![obrázek osmiúhelníku](obrazky/ukol01-osmiuhelnik.svg)
-![obrázek kolečka](obrazky/ukol01-kolecko.svg)
-![obrázek sluníčka](obrazky/ukol01-slunicko.svg)
+![octagon image](obrazky/ukol01-osmiuhelnik.svg)
+![circle image](obrazky/ukol01-kolecko.svg)
+![sun image](obrazky/ukol01-slunicko.svg)
 
-Poznámka: Želva neumí kreslit zakřivené čáry.
-Kolečko a podobné tvary nakreslíte tak, že nakreslíte krátkou čáru (třeba 5 pixelů), potom se otočíte o malý úhel (třeba 20°) a toto opakujete n-krát (třeba 18krát).
+Note: The turtle cannot draw curved lines. 
+You can draw a circle and similar shapes by drawing a short line (e.g., 5 pixels), then turning a small angle (e.g., 20°), and repeating this n times (e.g., 18 times).
 
-## Část 3
-Nakreslete kompozici podle obrázku níže.
-Použijete pro to metody, které už máte napsané.
-Vykreslení obrázků z části 1 a 2 v kódu zakomentujte, aby se do okna vykreslil pouze výsledný obrázek.
+## Part 3
+Draw a composition according to the image below. Use the methods you have already written for this. 
+Comment out the drawing of images from parts 1 and 2 in the code so that only the final image is drawn into the window.
 
-Nad nebo pod obrázkem si nechte místo pro své jméno – část 4.
+Leave space above or below the image for your name - Part 4.
 
-![obrázek vesnice](obrazky/ukol01-vesnice.svg)
+![village image](obrazky/ukol01-vesnice.svg)
 
-## Část 4
-Naučte želvu nakreslit písmena, která máte ve jméně, a nakreslete svoje křestní jméno.
-V této části se zaměřte na znovupoužitelnost.
-Vytvořte tedy pro každé písmeno metodu (např. `nakresliA()`, `nakresliB()`, … – stačí ta písmena, která máte ve jméně).
-U každého písmene začněte vlevo dole (jakoby na spodní lince písmene) a skončete na vpravo dole (na spodní lince písmene) v místě pro další písmeno (za mezerou).
-Pokud si disciplinovaně udržíte tento styl v každé metodě, bude možno písmena skládat za sebe v libovolném pořadí.
+## Part 4
+Teach the turtle to draw the letters in your name and draw your first name. 
+Focus on reusability in this part. Create a method for each letter (e.g., drawA(), drawB(), ... - only the letters you have in your name are necessary). 
+Start each letter from the bottom left (as if on the bottom line of the letter) and end at the bottom right (on the bottom line of the letter) 
+at the position for the next letter (after a space). If you maintain this style consistently in each method, the letters can be concatenated in any order.
 
-Pro ukázku uvažujme písmeno „K“.
-Tečkovaně je naznačeno, jak ho bude želva kreslit.
-Želva je zatím ve výchozí pozici (a písmeno zatím nenakreslila):
+Consider the letter "K" for demonstration. Dashed lines indicate how the turtle will draw it. 
+The turtle is currently in the default position (and has not yet drawn the letter):
 
-![postup nakreslení písmena K](obrazky/ukol01-pismeno-zacatek.svg)
+![drawing process of letter K](obrazky/ukol01-pismeno-zacatek.svg)
 
-Želva písmeno postupně nakreslí a skončí v této pozici:
+The turtle gradually draws the letter and ends up in this position:
 
-![nakreslené písmeno K](obrazky/ukol01-pismeno-konec.svg)
+![letter K drawn](obrazky/ukol01-pismeno-konec.svg)
 
-## Odevzdání úkolu
-Na konci budete mít aplikaci, která nakreslí obrázek a nad nebo pod ním bude vaše jméno.
-Výsledný obrázek nakreslený v aplikaci může vypadat třeba takhle:
+## Submission of the task
+At the end, you will have an application that draws an image, with your name above or below it. 
+The resulting image drawn in the application might look like this:
 
-![výsledný obrázek](obrazky/ukol01-vysledek.svg)
+![resulting image](obrazky/ukol01-vysledek.svg)
 
-Až budete mít vše hotové, ověřené a commitnete poslední změnu, proveďte *push* na GitHub – tím se všechny vaše commity odešlou na GitHub.
-Zkontrolujte si přes webové rozhraní GitHubu (přes prohlížeč), že tam jsou opravdu všechny vaše změny nahrané.
-Nakonec vložte odkaz na vaše repository do odevzdávárny domácích úkolů na https://moje.czechitas.cz.
-
-Pokud by vám nešlo *pushnout* kód na GitHub a zobrazila by se chyba, že nemáte dostatečná oprávnění, je to způsobené tím, že jste nenaklonovaly z GitHubu své repository, ale klonovaly jste ode mne – a do mého repository nemáte právo zápisu 😀
-Nezoufejte, dá se to snadno spravit, ale je lepší to udělat s lektorem nebo koučem – napište na Slack a někdo vám poradí.
+Once everything is done, verified, and you have committed the final change, push it to GitHub - this will send all your commits to GitHub. 
+Check through the GitHub web interface (via the browser) to ensure that all your changes are uploaded there. 
+Finally, insert the link to your repository into the homework submission system at  https://moje.czechitas.cz.
 
