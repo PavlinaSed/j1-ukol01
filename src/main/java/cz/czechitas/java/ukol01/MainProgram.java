@@ -31,6 +31,9 @@ public class MainProgram {
         drawRowOfHouses();
         newPositionLastHouse();
         drawHouse();
+
+        newPositionName();
+        writeName();
     }
 
     public void drawPiglet() {
@@ -115,6 +118,88 @@ public class MainProgram {
         }
     }
 
+    public void writeName() {
+        drawLetterP();
+        newPositionLetter();
+        drawLetterA();
+        newPositionLetter();
+        drawLetterV();
+        newPositionLetter();
+        drawLetterK();
+        newPositionLetter();
+        drawLetterA();
+    }
+
+    public void drawLetterP() {
+        zofka.move(100);
+        zofka.turnRight(90);
+
+        for (int i = 0; i < 5; i++) {
+            zofka.move(10);
+            zofka.turnRight(90);
+            zofka.move(5);
+            zofka.turnLeft(90);
+        }
+        zofka.turnRight(90);
+        zofka.move(20);
+        zofka.turnRight(90);
+
+        for (int i = 0; i < 5; i++) {
+            zofka.move(10);
+            zofka.turnLeft(90);
+            zofka.move(5);
+            zofka.turnRight(90);
+        }
+        zofka.turnLeft(90);
+        zofka.move(50);
+        zofka.turnLeft(180);
+    }
+
+    public void drawLetterA() {
+        zofka.turnRight(25);
+        zofka.move(110);
+        zofka.turnRight(135);
+        zofka.move(105);
+        zofka.turnRight(180);
+        zofka.move(60);
+        zofka.turnLeft(65);
+        zofka.move(35);
+        zofka.turnRight(180);
+        zofka.move(35);
+        zofka.turnRight(65);
+        zofka.move(60);
+        zofka.turnLeft(160);
+    }
+
+    public void drawLetterV() {
+        zofka.turnLeft(25);
+        zofka.move(100);
+        zofka.turnLeft(180);
+        zofka.move(100);
+        zofka.turnLeft(135);
+        zofka.move(100);
+        zofka.turnLeft(180);
+        zofka.move(100);
+        zofka.turnRight(160);
+    }
+
+    public void drawLetterK() {
+        zofka.move(100);
+        zofka.turnRight(180);
+        zofka.move(40);
+        zofka.turnLeft(40);
+        zofka.move(70);
+        zofka.turnLeft(180);
+        zofka.move(70);
+        zofka.turnRight(85);
+        zofka.move(50);
+        zofka.turnRight(180);
+        zofka.move(50);
+        zofka.turnLeft(45);
+        zofka.move(60);
+        zofka.turnLeft(180);
+    }
+
     public void newPositionRight() {
         zofka.penUp();
         zofka.turnRight(90);
@@ -174,6 +259,22 @@ public class MainProgram {
         zofka.turnRight(5);
     }
 
+    public void newPositionName() {
+        zofka.penUp();
+        zofka.move(500);
+        zofka.turnLeft(90);
+        zofka.move(320);
+        zofka.turnRight(90);
+        zofka.penDown();
+    }
+
+    public void newPositionLetter() {
+        zofka.penUp();
+        zofka.turnRight(90);
+        zofka.move(55);
+        zofka.turnLeft(90);
+        zofka.penDown();
+    }
 
 /*
     public void drawOctagon() {
